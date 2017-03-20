@@ -1,0 +1,5 @@
+*.sublime-project
+*.sublime-workspace
+config/**
+src/customMetadata/Latch_Application.*
+src/customMetadata/Latch_Operation.*

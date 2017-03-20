@@ -1,0 +1,45 @@
+<aura:component controller="LatchUserManagerController">
+    <aura:attribute name="latchAccount" type="Latch_Account__c" />
+    <aura:attribute name="pairingToken" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+	<div class="slds-card">
+        <div class="slds-card-header slds-grid">
+            <header class="slds-media slds-media--center slds-has-flexi-truncate">
+              <div class="slds-media__body">
+                <h2>
+                  <span class="slds-text-heading--small">Latch Management</span>
+                </h2>
+              </div>
+            </header>
+        </div>
+        <div class="slds-card-body">
+            <aura:if isTrue="{!empty(v.latchAccount.Account_Id__c)}">
+                <form>
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label">Pairing Code</label>
+                      <div class="slds-form-element__control">
+                        <ui:inputText class="slds-input" 
+                               value="{!v.pairingToken}" placeholder="Insert Pairing Code" />
+                      </div>
+                    </div>
+                    <div class="slds-form-element">
+                      <div class="slds-form-element__control">
+                        <lightning:button variant="brand" label="Pair" onclick="{!c.doPair}" />
+                      </div>
+                    </div>
+                </form>
+                <aura:set attribute="else">
+                    <form>
+                        <div class="slds-form-element">
+                          <div class="slds-form-element__control">
+                            <lightning:button variant="brand" label="Unpair" onclick="{!c.doUnpair}" />
+                          </div>
+                        </div>
+                    </form>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>
