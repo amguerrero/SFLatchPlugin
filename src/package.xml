@@ -25,12 +25,32 @@
         <name>CustomMetadata</name>
     </types>
     <types>
+        <members>Latch_Account__c</members>
+        <members>Latch_Application__mdt</members>
+        <members>Latch_Operation__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>*</members>
         <name>Flow</name>
     </types>
     <types>
         <members>*</members>
         <name>FlowDefinition</name>
+    </types>
+    <types>
+        <members>Latch_Account__c-Latch Account Layout</members>
+        <members>Latch_Application__mdt-Latch Application Layout</members>
+        <members>Latch_Operation__mdt-Latch Operation Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Latch_Api_Url</members>
+        <name>RemoteSiteSetting</name>
     </types>
     <types>
         <members>*</members>
